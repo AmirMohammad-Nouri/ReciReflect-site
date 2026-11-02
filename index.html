@@ -4,20 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FoodRec: transparent, agentic food recommendation</title>
-  <meta name="description" content="Screenshots, video and a demo of FoodRec, a transparent recipe recommender with a supervisor agent.">
+  <meta name="description" content="Interactive companion to the FoodRec demo: try the ranking, replay the supervisor, tour the app, and open the live demo.">
   <meta property="og:title" content="FoodRec: transparent, agentic food recommendation">
-  <meta property="og:description" content="Screenshots, video and a demo of FoodRec, a transparent recipe recommender with a supervisor agent.">
+  <meta property="og:description" content="Try the ranking, replay the supervisor, tour the app, and open the live demo.">
   <meta property="og:image" content="media/screens/discover.webp">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="progress" aria-hidden="true"></div>
   <nav class="topbar" aria-label="Main">
     <div class="wrap topbar-in">
       <a class="brand" href="#top" id="brand"></a>
-      <div class="navlinks">
+      <div class="navlinks" id="navlinks">
         <a href="#video">Video</a>
-        <a href="#screens">Screenshots</a>
-        <a href="#what-it-does">Features</a>
+        <a href="#lab">Ranking lab</a>
+        <a href="#replay">Supervisor</a>
+        <a href="#tour">App tour</a>
         <a href="#install">Install</a>
       </div>
       <div id="nav-demo"></div>
@@ -26,36 +28,131 @@
 
   <header class="hero" id="top">
     <div class="wrap hero-text">
+      <p class="eyebrow" id="eyebrow"></p>
       <h1 id="title"></h1>
       <p class="tagline" id="tagline"></p>
       <p class="intro" id="intro"></p>
       <div class="actions" id="actions"></div>
     </div>
-    <div class="wrap hero-media"><img class="hero-shot" id="hero-shot" alt="" width="1800" height="1125"></div>
+    <div class="wrap hero-media">
+      <div class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><img class="hero-shot" id="hero-shot" alt="" width="1800" height="1125"></div>
+    </div>
   </header>
 
   <main>
-    <section class="wrap principle">
+    <section class="wrap principle reveal">
       <p class="principle-lead" id="principle"></p>
       <p id="principle-detail"></p>
     </section>
-    <section class="wrap" id="video" aria-labelledby="video-h">
-      <h2 id="video-h">Video</h2>
-      <div class="videos" id="videos"></div>
+
+    <section class="wrap reveal" id="video" aria-labelledby="video-h">
+      <p class="kicker">Watch</p>
+      <h2 id="video-h">See it end to end</h2>
+      <div class="video-layout">
+        <div class="videos" id="videos"></div>
+        <div class="chapters-box">
+          <h3>Chapters</h3>
+          <ol class="chapters" id="chapters"></ol>
+        </div>
+      </div>
     </section>
-    <section class="wrap" id="screens" aria-labelledby="screens-h">
-      <h2 id="screens-h">Screenshots</h2>
-      <div class="gallery" id="gallery"></div>
-      <p class="note" id="screenshot-note"></p>
+
+    <section class="band" id="lab" aria-labelledby="lab-h">
+      <div class="wrap reveal">
+        <p class="kicker">Try it</p>
+        <h2 id="lab-h">Ranking lab</h2>
+        <p class="lead">Move the sliders and watch real recipes re-rank using FoodRec's scoring formula. Taste keeps a fixed 25% share; your three values share the other 75%.</p>
+        <div class="lab">
+          <div class="lab-controls">
+            <div class="seg" id="lab-meal" role="group" aria-label="Meal"></div>
+            <div id="lab-sliders"></div>
+            <div class="presets"><span>Presets</span><div id="lab-presets"></div></div>
+          </div>
+          <div class="lab-results">
+            <div class="legend" id="lab-legend"></div>
+            <ol class="ranklist" id="lab-list"></ol>
+          </div>
+        </div>
+        <p class="note" id="lab-note"></p>
+      </div>
     </section>
-    <section class="wrap" id="what-it-does" aria-labelledby="features-h">
+
+    <section class="wrap reveal" id="replay" aria-labelledby="replay-h">
+      <p class="kicker">Replay</p>
+      <h2 id="replay-h">When does the supervisor step in?</h2>
+      <p class="lead">Step through a recorded week with Sara, a fictional user. Her goal gives convenience 0.15, but she keeps choosing the easiest dish. Every number here was recorded from the running app.</p>
+      <div class="replay">
+        <div class="replay-chart">
+          <div class="replay-head">
+            <div class="stat"><span>Saved goal</span><b>0.15</b></div>
+            <div class="stat"><span>Her choices</span><b id="rp-obs">0.15</b></div>
+            <div class="stat"><span>Gap</span><b id="rp-gap">0.00</b></div>
+            <div class="stat"><span>Informative reactions</span><b id="rp-ev">0</b></div>
+          </div>
+          <div id="rp-svg" class="chart" tabindex="0" role="img" aria-label="Line chart of the gap between Sara's choices and her saved convenience weight. Use the left and right arrow keys to read each point."></div>
+          <div id="rp-tip" class="tip" hidden></div>
+          <div class="replay-controls">
+            <button type="button" class="ctl primary" id="rp-play">Play</button>
+            <button type="button" class="ctl" id="rp-next">Next reaction</button>
+            <button type="button" class="ctl" id="rp-reset">Start over</button>
+          </div>
+          <details class="data-table">
+            <summary>View the data as a table</summary>
+            <div class="table-scroll"><table id="rp-table"></table></div>
+          </details>
+        </div>
+        <div class="replay-side" aria-live="polite">
+          <div id="rp-status"></div>
+          <div id="rp-card"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="tour" aria-labelledby="tour-h">
+      <div class="wrap reveal">
+        <p class="kicker">Explore</p>
+        <h2 id="tour-h">A guided tour of the app</h2>
+        <p class="lead">Pick a screen, then select a numbered point to see what it does.</p>
+        <div class="tour">
+          <div class="tour-rail" id="tour-rail" role="group" aria-label="Screens"></div>
+          <div class="tour-main">
+            <div class="browser tour-stage">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="tour-img" id="tour-img"></div>
+            </div>
+            <div class="tour-info">
+              <div class="tour-info-head">
+                <div><h3 id="tour-title"></h3><p id="tour-text"></p></div>
+                <div class="tour-buttons">
+                  <button type="button" class="ctl" id="tour-prev" aria-label="Previous screen">‹</button>
+                  <button type="button" class="ctl" id="tour-next" aria-label="Next screen">›</button>
+                  <button type="button" class="ctl" id="tour-zoom">Enlarge</button>
+                </div>
+              </div>
+              <ol class="tour-notes" id="tour-notes"></ol>
+            </div>
+          </div>
+        </div>
+        <p class="note" id="screenshot-note"></p>
+      </div>
+    </section>
+
+    <section class="wrap reveal" id="what-it-does" aria-labelledby="features-h">
+      <p class="kicker">Capabilities</p>
       <h2 id="features-h">What it does</h2>
       <div class="features" id="features"></div>
     </section>
-    <section class="wrap" id="install" aria-labelledby="install-h">
+
+    <section class="wrap reveal" id="install" aria-labelledby="install-h">
+      <p class="kicker">Install</p>
       <h2 id="install-h">Run it yourself</h2>
-      <pre><code id="install-code"></code></pre>
+      <div class="code">
+        <button type="button" class="ctl copy" id="copy">Copy</button>
+        <pre><code id="install-code"></code></pre>
+      </div>
     </section>
+
+    <section class="cta wrap reveal" id="cta"></section>
   </main>
 
   <footer class="wrap" id="footer"></footer>
@@ -64,14 +161,12 @@
     <button class="vw-btn vw-close" id="vw-close" aria-label="Close">×</button>
     <button class="vw-btn vw-prev" id="vw-prev" aria-label="Previous screenshot">‹</button>
     <button class="vw-btn vw-next" id="vw-next" aria-label="Next screenshot">›</button>
-    <figure>
-      <img id="vw-img" alt="">
-      <figcaption id="vw-cap"></figcaption>
-    </figure>
+    <figure><img id="vw-img" alt=""><figcaption id="vw-cap"></figcaption></figure>
   </dialog>
 
-  <noscript><p class="wrap">This page needs JavaScript to show its screenshots and videos.</p></noscript>
+  <noscript><p class="wrap">This page needs JavaScript for its interactive parts.</p></noscript>
   <script src="content.js"></script>
+  <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

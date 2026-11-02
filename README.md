@@ -1,6 +1,6 @@
 # FoodRec website
 
-A static page with screenshots, videos and a link to the FoodRec demo. It has no build step and no
+An interactive page with a ranking lab, a supervisor replay, an app tour, a video with chapters and a link to the FoodRec demo. It has no build step and no
 dependencies, and is separate from the FoodRec code.
 
 ## Publish
@@ -18,11 +18,16 @@ Nearly everything is in `content.js`:
 | To | Do this |
 |---|---|
 | Show the demo button | Set `demoUrl`. The button stays hidden while it is empty. |
-| Add a screenshot | Put the image in `media/screens/` and add a line to `screenshots`. The first one is also the large image at the top. |
+| Add a screen to the tour | Put the image in `media/screens/` and add an entry to `screenshots`. `notes` are the numbered points, placed by percentage. The first screen is also the large image at the top. |
+| Change video chapters | Edit `chapters`; times are in seconds. |
 | Add a video file | Put it in `media/videos/` and add `{ title, description, file, poster, captions }` to `videos` (`captions`, a `.vtt` file, is optional). |
 | Add a YouTube video | Add `{ title, description, youtube: "VIDEO_ID" }` to `videos`. |
 
 GitHub rejects files over 100 MB, so use YouTube for long videos.
+
+## The data
+
+`data.js` holds real values recorded from FoodRec: scores of recipes from its catalogue, and one recorded supervisor run. Do not edit them by hand.
 
 ## Preview
 
