@@ -13,13 +13,14 @@ window.SITE = {
   principleDetail: "Ranking is done by a deterministic multi-criteria engine you can audit. The language model only " +
                    "classifies messages, chooses among fixed options and phrases answers.",
 
-  // A video is either a file in media/videos ({ file, poster }) or a YouTube video ({ youtube: "VIDEO_ID" }).
+  // A video is either a file in media/videos ({ file, poster, captions }) or a YouTube video ({ youtube: "VIDEO_ID" }).
   videos: [
     {
-      title: "A walk through the app",
-      description: "Onboarding, recommendations, score details, the assistant, a supervisor question and the admin Config page. No sound; captions explain each step.",
-      file: "media/videos/walkthrough.webm",
+      title: "FoodRec in action: Sara's week",
+      description: "A narrated walkthrough (about 8 minutes) with a fictional user: the parts of the app, the moment each supervisor threshold is reached, and the Config page. The voice is computer-generated; turn on captions with the CC button.",
+      file: "media/videos/walkthrough.mp4",
       poster: "media/videos/walkthrough-poster.webp",
+      captions: "media/videos/walkthrough.vtt",
     },
     // { title: "Talk about the project", description: "", youtube: "VIDEO_ID" },
   ],

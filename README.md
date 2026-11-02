@@ -19,7 +19,7 @@ Nearly everything is in `content.js`:
 |---|---|
 | Show the demo button | Set `demoUrl`. The button stays hidden while it is empty. |
 | Add a screenshot | Put the image in `media/screens/` and add a line to `screenshots`. The first one is also the large image at the top. |
-| Add a video file | Put it in `media/videos/` and add `{ title, description, file, poster }` to `videos`. |
+| Add a video file | Put it in `media/videos/` and add `{ title, description, file, poster, captions }` to `videos` (`captions`, a `.vtt` file, is optional). |
 | Add a YouTube video | Add `{ title, description, youtube: "VIDEO_ID" }` to `videos`. |
 
 GitHub rejects files over 100 MB, so use YouTube for long videos.

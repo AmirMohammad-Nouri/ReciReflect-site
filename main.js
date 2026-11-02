@@ -44,7 +44,9 @@
         referrerPolicy: "strict-origin-when-cross-origin",
       });
     }
-    return el("video", { src: v.file, poster: v.poster || "", controls: true, preload: "metadata", playsInline: true, title: v.title });
+    const video = el("video", { src: v.file, poster: v.poster || "", controls: true, preload: "metadata", playsInline: true, title: v.title });
+    if (v.captions) video.append(el("track", { kind: "captions", src: v.captions, srclang: "en", label: "English" }));
+    return video;
   }
   if (!S.videos.length) $("video").remove();
   S.videos.forEach((v) => $("videos").append(
