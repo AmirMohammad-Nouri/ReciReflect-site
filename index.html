@@ -11,14 +11,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
+  <nav class="topbar" aria-label="Main">
+    <div class="wrap topbar-in">
+      <a class="brand" href="#top" id="brand"></a>
+      <div class="navlinks">
+        <a href="#video">Video</a>
+        <a href="#screens">Screenshots</a>
+        <a href="#what-it-does">Features</a>
+        <a href="#install">Install</a>
+      </div>
+      <div id="nav-demo"></div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
     <div class="wrap hero-text">
       <h1 id="title"></h1>
       <p class="tagline" id="tagline"></p>
       <p class="intro" id="intro"></p>
       <div class="actions" id="actions"></div>
     </div>
-    <div class="wrap"><img class="hero-shot" id="hero-shot" alt="" width="1800" height="1125"></div>
+    <div class="wrap hero-media"><img class="hero-shot" id="hero-shot" alt="" width="1800" height="1125"></div>
   </header>
 
   <main>
@@ -35,7 +48,7 @@
       <div class="gallery" id="gallery"></div>
       <p class="note" id="screenshot-note"></p>
     </section>
-    <section class="wrap" aria-labelledby="features-h">
+    <section class="wrap" id="what-it-does" aria-labelledby="features-h">
       <h2 id="features-h">What it does</h2>
       <div class="features" id="features"></div>
     </section>

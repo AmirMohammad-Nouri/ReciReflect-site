@@ -11,6 +11,7 @@
 
   document.title = `${S.title}: ${S.tagline.charAt(0).toLowerCase()}${S.tagline.slice(1)}`;
   $("title").textContent = S.title;
+  $("brand").textContent = S.title;
   $("tagline").textContent = S.tagline;
   $("intro").textContent = S.intro;
   $("principle").textContent = S.principle;
@@ -21,6 +22,7 @@
   // Buttons: the demo button only appears once content.js has an address for it.
   const external = { target: "_blank", rel: "noopener" };
   const actions = $("actions");
+  if (S.demoUrl) $("nav-demo").append(el("a", { className: "btn primary small", href: S.demoUrl, textContent: "Live demo", ...external }));
   if (S.demoUrl) actions.append(el("a", { className: "btn primary", href: S.demoUrl, textContent: "Try the live demo", ...external }));
   if (S.videos.length) actions.append(el("a", { className: "btn" + (S.demoUrl ? "" : " primary"), href: "#video", textContent: "Watch the video" }));
   actions.append(el("a", { className: "btn", href: "#screens", textContent: "See the screenshots" }));

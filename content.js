@@ -6,7 +6,7 @@ window.SITE = {
          "A supervisor agent watches for drift between what people say and what they do, and asks before anything changes.",
 
   // Paste the address of your running demo here. While it is empty, the demo button stays hidden.
-  demoUrl: "",
+  demoUrl: "https://fip-195-148-23-242.kaj.poutavm.fi/",
   repoUrl: "https://github.com/AmirMohammad-Nouri/agentic_recom_sys",
 
   principle: "The agent manages the learning process; it does not pick the food.",
