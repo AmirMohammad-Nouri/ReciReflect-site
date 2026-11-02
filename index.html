@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FoodRec: transparent, agentic food recommendation</title>
+  <meta name="description" content="Screenshots, video and a demo of FoodRec, a transparent recipe recommender with a supervisor agent.">
+  <meta property="og:title" content="FoodRec: transparent, agentic food recommendation">
+  <meta property="og:description" content="Screenshots, video and a demo of FoodRec, a transparent recipe recommender with a supervisor agent.">
+  <meta property="og:image" content="media/screens/discover.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-text">
+      <h1 id="title"></h1>
+      <p class="tagline" id="tagline"></p>
+      <p class="intro" id="intro"></p>
+      <div class="actions" id="actions"></div>
+    </div>
+    <div class="wrap"><img class="hero-shot" id="hero-shot" alt="" width="1800" height="1125"></div>
+  </header>
+
+  <main>
+    <section class="wrap principle">
+      <p class="principle-lead" id="principle"></p>
+      <p id="principle-detail"></p>
+    </section>
+    <section class="wrap" id="video" aria-labelledby="video-h">
+      <h2 id="video-h">Video</h2>
+      <div class="videos" id="videos"></div>
+    </section>
+    <section class="wrap" id="screens" aria-labelledby="screens-h">
+      <h2 id="screens-h">Screenshots</h2>
+      <div class="gallery" id="gallery"></div>
+      <p class="note" id="screenshot-note"></p>
+    </section>
+    <section class="wrap" aria-labelledby="features-h">
+      <h2 id="features-h">What it does</h2>
+      <div class="features" id="features"></div>
+    </section>
+    <section class="wrap" id="install" aria-labelledby="install-h">
+      <h2 id="install-h">Run it yourself</h2>
+      <pre><code id="install-code"></code></pre>
+    </section>
+  </main>
+
+  <footer class="wrap" id="footer"></footer>
+
+  <dialog id="viewer" aria-label="Screenshot viewer">
+    <button class="vw-btn vw-close" id="vw-close" aria-label="Close">×</button>
+    <button class="vw-btn vw-prev" id="vw-prev" aria-label="Previous screenshot">‹</button>
+    <button class="vw-btn vw-next" id="vw-next" aria-label="Next screenshot">›</button>
+    <figure>
+      <img id="vw-img" alt="">
+      <figcaption id="vw-cap"></figcaption>
+    </figure>
+  </dialog>
+
+  <noscript><p class="wrap">This page needs JavaScript to show its screenshots and videos.</p></noscript>
+  <script src="content.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
