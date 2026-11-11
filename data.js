@@ -1,4 +1,4 @@
-// Real data recorded from FoodRec. See README.md.
+// Real data recorded from ReciReflect. See README.md.
 window.FOODREC_DATA = {
 "recipes": [
 {

@@ -1,15 +1,15 @@
-# FoodRec website
+# ReciReflect website
 
-An interactive page with a ranking lab, a supervisor replay, an app tour, a video with chapters and a link to the FoodRec demo. It has no build step and no
-dependencies, and is separate from the FoodRec code.
+An interactive page with a ranking lab, a supervisor replay, an app tour, a video with chapters and a link to the ReciReflect demo. It has no build step and no
+dependencies, and is separate from the ReciReflect code.
 
 ## Publish
 
-1. Create a public GitHub repository named `foodrec-site` and push this folder to its `main` branch.
+1. Create a public GitHub repository named `ReciReflect-site` and push this folder to its `main` branch.
 2. In that repository: **Settings → Pages → Build and deployment → Source: Deploy from a branch**, then
    choose **main** and **/ (root)**.
 
-The page appears at `https://amirmohammad-nouri.github.io/foodrec-site/`. Each push to `main` updates it.
+The page appears at `https://amirmohammad-nouri.github.io/ReciReflect-site/`. Each push to `main` updates it.
 
 ## Change the content
 
@@ -27,7 +27,7 @@ GitHub rejects files over 100 MB, so use YouTube for long videos.
 
 ## The data
 
-`data.js` holds real values recorded from FoodRec: scores of recipes from its catalogue, and one recorded supervisor run. Do not edit them by hand.
+`data.js` holds real values recorded from ReciReflect: scores of recipes from its catalogue, and one recorded supervisor run. Do not edit them by hand.
 
 ## Preview
 

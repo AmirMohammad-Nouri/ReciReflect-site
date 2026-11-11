@@ -1,7 +1,7 @@
 WEBVTT
 
 00:00:00.504 --> 00:00:05.428
-FoodRec is a recipe recommender built for research on transparent recommendation.
+ReciReflect is a recipe recommender built for research on transparent recommendation.
 
 00:00:05.428 --> 00:00:12.419
 Every score can be opened, every step of its agent is visible, and nothing about your goal changes until you agree.
@@ -217,7 +217,7 @@ Settings comes first.
 The language model can run locally through Ollama, through any OpenAI compatible service, or through the Claude API.
 
 00:05:53.417 --> 00:06:00.986
-FoodRec also works with no model at all, using built-in rules and templates, which is how this walkthrough was recorded.
+ReciReflect also works with no model at all, using built-in rules and templates, which is how this walkthrough was recorded.
 
 00:06:01.546 --> 00:06:11.639
 Further down are the dataset, the ranking options, such as how many dishes are reserved for discovery, and the meal cycle: how many days and meals a study runs for.
@@ -262,7 +262,7 @@ These rules are enforced on the server, not just hidden in the interface.
 Users and study creates the population.
 
 00:07:13.802 --> 00:07:20.036
-Choose the number of participants and how they split across roles, and FoodRec generates the accounts.
+Choose the number of participants and how they split across roles, and ReciReflect generates the accounts.
 
 00:07:20.593 --> 00:07:27.482
 Export produces one standard record per user, as JSON or as CSV tables, ready for analysis.
@@ -271,7 +271,7 @@ Export produces one standard record per user, as JSON or as CSV tables, ready fo
 All of these settings live in one configuration file, so a study's setup can be saved, shared and repeated.
 
 00:07:36.233 --> 00:07:37.281
-That is FoodRec.
+That is ReciReflect.
 
 00:07:37.281 --> 00:07:39.836
 The agent manages the learning process.

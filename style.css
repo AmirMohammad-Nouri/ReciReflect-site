@@ -1,4 +1,4 @@
-/* Same colours as the FoodRec app for the page. Chart colours are a colour-blind-checked palette. */
+/* Same colours as the ReciReflect app for the page. Chart colours are a colour-blind-checked palette. */
 :root {
   --bg: #fbfaf7; --surface: #fff; --sunken: #f2f0ea; --border: #e4e1d9; --text: #1d211f; --text-2: #4b514d; --muted: #666b66;
   --accent: #2f6b4f; --accent-strong: #245a41; --accent-text: #fff; --band: #f3f1ea;

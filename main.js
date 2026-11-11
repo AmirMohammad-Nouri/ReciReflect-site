@@ -133,7 +133,7 @@
     markPreset(); renderLab();
   }
   [["p", "Taste (fixed share)"], ...CRIT].forEach(([k, n]) => $("lab-legend").append(el("span", {}, el("i", { style: `background:var(--s-${k})` }), n)));
-  $("lab-note").textContent = `Uses the real scores of ${D.recipes.length} recipes from FoodRec's catalogue, with taste at its starting value of 0.50. This lab ranks by score alone: the full app also applies mandatory rules, keeps lists varied and learns taste, so its lists can differ.`;
+  $("lab-note").textContent = `Uses the real scores of ${D.recipes.length} recipes from ReciReflect's catalogue, with taste at its starting value of 0.50. This lab ranks by score alone: the full app also applies mandatory rules, keeps lists varied and learns taste, so its lists can differ.`;
 
   function renderLab() {
     const sh = shares();

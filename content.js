@@ -1,14 +1,14 @@
 // Everything you are likely to change on the page is in this file. See README.md.
 window.SITE = {
-  title: "FoodRec",
+  title: "ReciReflect",
   eyebrow: "Demo paper · Interactive companion",
   tagline: "Transparent, agentic food recommendation",
-  intro: "FoodRec recommends recipes from about 9,600 food.com dishes, ranked by what each person values. " +
+  intro: "ReciReflect recommends recipes from about 9,600 food.com dishes, ranked by what each person values. " +
          "A supervisor agent watches for drift between what people say and what they do, and asks before anything changes.",
 
   // Paste the address of your running demo here. While it is empty, the demo button stays hidden.
   demoUrl: "https://fip-195-148-23-242.kaj.poutavm.fi/",
-  repoUrl: "https://github.com/AmirMohammad-Nouri/agentic_recom_sys",
+  repoUrl: "https://github.com/AmirMohammad-Nouri/ReciReflect",
 
   principle: "The agent manages the learning process; it does not pick the food.",
   principleDetail: "Ranking is done by a deterministic multi-criteria engine you can audit. The language model only " +
@@ -17,7 +17,7 @@ window.SITE = {
   // A video is either a file in media/videos ({ file, poster, captions }) or a YouTube video ({ youtube: "VIDEO_ID" }).
   videos: [
     {
-      title: "FoodRec in action: Sara's week",
+      title: "ReciReflect in action: Sara's week",
       description: "A narrated walkthrough (about 8 minutes) with a fictional user: the parts of the app, the moment each supervisor threshold is reached, and the Config page. The voice is computer-generated; turn on captions with the CC button.",
       file: "media/videos/walkthrough.mp4",
       poster: "media/videos/walkthrough-poster.webp",
@@ -96,8 +96,8 @@ window.SITE = {
   ],
 
   install: [
-    "git clone https://github.com/AmirMohammad-Nouri/agentic_recom_sys.git",
-    "cd agentic_recom_sys",
+    "git clone https://github.com/AmirMohammad-Nouri/ReciReflect.git",
+    "cd ReciReflect",
     "python3 -m venv .venv && source .venv/bin/activate",
     "pip install -e .",
     "foodrec admin password   # choose the administrator's password",
