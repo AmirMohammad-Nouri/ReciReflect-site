@@ -1,6 +1,6 @@
 WEBVTT
 
-00:00:00.504 --> 00:00:05.428
+00:00:00.100 --> 00:00:05.428
 ReciReflect is a recipe recommender built for research on transparent recommendation.
 
 00:00:05.428 --> 00:00:12.419
@@ -15,7 +15,7 @@ She wants to eat green and healthy food, but she also has a very busy week.
 00:00:23.183 --> 00:00:28.074
 Let's see what happens when what she says and what she does start to drift apart.
 
-00:00:29.286 --> 00:00:33.121
+00:00:29.003 --> 00:00:33.121
 Sara signs in with the account her study administrator created for her.
 
 00:00:33.426 --> 00:00:35.143
@@ -72,7 +72,7 @@ Nothing here is a black box.
 00:01:43.430 --> 00:01:53.070
 How it's scored opens the full calculation: each criterion, its weight, and its contribution to the final score, right down to the individual nutrients.
 
-00:01:56.108 --> 00:01:58.318
+00:01:56.077 --> 00:01:58.318
 The assistant sits beside every page.
 
 00:01:58.318 --> 00:02:03.456
@@ -198,7 +198,7 @@ Insights puts it side by side: what Sara said she values, next to what her choic
 00:05:13.530 --> 00:05:19.606
 Activity keeps the full record: every reaction she made, and every decision the supervisor reached.
 
-00:05:20.162 --> 00:05:27.817
+00:05:20.122 --> 00:05:27.817
 And this is the knowledge graph the supervisor draws its evidence from, connecting Sara to her goals, her choices, and her reasons.
 
 00:05:33.220 --> 00:05:34.732
@@ -258,7 +258,7 @@ One group can get full transparency while another sees only a baseline list.
 00:07:06.141 --> 00:07:10.861
 These rules are enforced on the server, not just hidden in the interface.
 
-00:07:11.419 --> 00:07:13.802
+00:07:11.370 --> 00:07:13.802
 Users and study creates the population.
 
 00:07:13.802 --> 00:07:20.036
@@ -270,7 +270,7 @@ Export produces one standard record per user, as JSON or as CSV tables, ready fo
 00:07:28.039 --> 00:07:34.870
 All of these settings live in one configuration file, so a study's setup can be saved, shared and repeated.
 
-00:07:36.233 --> 00:07:37.281
+00:07:36.032 --> 00:07:37.281
 That is ReciReflect.
 
 00:07:37.281 --> 00:07:39.836
@@ -281,4 +281,3 @@ It does not pick the food.
 
 00:07:41.539 --> 00:07:47.566
 Ranking stays auditable, the evidence stays visible, and the decisions stay with the person.
-
